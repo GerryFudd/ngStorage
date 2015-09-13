@@ -160,7 +160,7 @@
 
                             _debounce = null;
 
-                            if (!angular.equals($storage, _last$storage)) {
+                            if (JSON.stringify($storage)!== JSON.stringify(_last$storage)) {
                                 temp$storage = angular.copy(_last$storage);
                                 angular.forEach($storage, function(v, k) {
                                     if (angular.isDefined(v) && '$' !== k[0]) {
